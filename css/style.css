@@ -1,0 +1,62 @@
+body{
+    margin: 0;
+}
+nav{
+    width: 100%;
+    background-color: black;
+}
+.navbar{
+    display: inline-block;
+}
+.nav-item{
+    padding:20px;
+}
+#nav-list{
+    display: inline-block;
+}
+.nav-list-icon{
+    display: none;
+}
+.nav-list-item{
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    display:inline-block; /*Find out more on this*/
+    text-align: center;
+}
+.nav-list-item:hover{
+    background-color: #303030;
+    transition: 0.3s;
+}
+footer{
+    width: 100%;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+article{
+    min-height: 520px;
+    text-align: center;
+}
+@media screen and (max-width: 500px){
+    .nav-list-item{
+        width: 100%;
+        transition: all .5s ease-in-out;
+    }
+    .nav-list-icon{
+        position: absolute;
+        right: 0;
+    }
+    .nav-item{
+        display: inline-block;
+    }
+    .navbar{
+        width: 100%;
+    }
+    #nav-list{
+        display: none;
+        transition: 1s;
+    }
+}
