@@ -1,46 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8">
         <title>Chris Resume</title>
         <link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/script.js"></script>
     </head>
     <body>
-        <nav>
-            <div class="navbar">
-                <a class="nav-item" href="index.html"><img src="" alt="Logo"></a>
-                <a class="nav-item nav-list-icon" href="javascript:void(0);" class="icon" onclick="showNavList()">&#9776;</a>
-            </div>
-            <div id="nav-list">
-                <a class="nav-list-item" href="exp.html">Experience</a>
-                <a class="nav-list-item" href="skills.html">Skills</a>
-                <a class="nav-list-item" href="edu.html">Education</a>
-                <a class="nav-list-item" href="sampl.html">Samples</a>
-            </div>
-        </nav>
-        <div id="content">
-            <article style="background-color: red;">
-                Welcome
-            </article>
-            <article style="background-color: blue;">
-                Who I am and what I want to be
-            </article>
+        <div class="nav-wrap">
+            <nav>
+                <a class="nav-logo" href="index.html"><img src="" alt="Logo"></a>
+                <div class="nav-list">  <!--The a-links below are structured like this because inline-block is a whitespace dependent method-->
+                    <a class="nav-list-item" href="exp.html">
+                        Experience
+                    </a><a class="nav-list-item" href="skills.html">
+                        Skills
+                    </a><a class="nav-list-item" href="edu.html">
+                        Education
+                    </a><a class="nav-list-item" href="sampl.html">
+                        Samples
+                    </a>
+                </div>
+                <div class="icon">☰</div>
+            </nav>
         </div>
+        <article>
+            <div class="content" style="background-color: #d2d2d2;">
+                Welcome
+            </div>
+            <div class="content" style="background-color: white;">
+                Who I am and what I want to be. 
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages,
+                and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </div>
+        </article>
         <footer>
             <div>
-                <img src="" alt="Linkedin Icon">
-                <img src="" alt="Facebook Icon">
-                <img src="" alt="Youtube Icon">
+                <img src="img/li.png" alt="Linkedin Icon">
+                <img src="img/fb.png" alt="Facebook Icon">
+                <img src="img/yt.png" alt="Youtube Icon">
             </div>
-            <div>
+            <div class="footer-cont">
                 All Rights Reserved
             </div>
-            <div>
-                <a href="#">Privacy Notice</a>
-                <a href="#">Terms of Service</a>
-                <a href="#">Cookie Preference</a>
-            </div>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Cookie Preference</a>
         </footer>
     </body>
 </html>

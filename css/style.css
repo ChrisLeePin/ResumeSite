@@ -1,62 +1,197 @@
-body{
+/*Mobile*/
+*{
+    padding: 0;
     margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    min-height: 100%;
+    color: #555;
+}
+
+/*Navigation Bar*/
+.nav-wrap{
+    width:100%;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.15);
+    background-color: black;
+    position: fixed;
 }
 nav{
-    width: 100%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-column-gap: 30px;
+    grid-template-rows: 60px;
+    align-items: center;
+    position: relative;
+}
+.nav-logo{
+    padding-left: 20px;
+}
+.nav-list{
+    width:  100%;
+    position: absolute;
+    top: 60px;
     background-color: black;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
 }
-.navbar{
-    display: inline-block;
-}
-.nav-item{
-    padding:20px;
-}
-#nav-list{
-    display: inline-block;
-}
-.nav-list-icon{
-    display: none;
-}
-.nav-list-item{
-    text-decoration: none;
+.nav-list a{
     color: white;
-    padding: 20px;
-    display:inline-block; /*Find out more on this*/
-    text-align: center;
+    text-decoration: none;
+    display: block;
+    padding: 21px 25px;
+    text-transform: uppercase;
+    transition: background-color 0.3s, color 0.3s;
 }
-.nav-list-item:hover{
-    background-color: #303030;
-    transition: 0.3s;
+.nav-list a:hover,.nav-list a.active{
+    background-color: grey;
 }
+nav .icon{
+    justify-self: end;
+    font-size: 24px;
+    padding-right: 20px;
+    cursor: pointer;
+ }
+
+/*Footer*/
 footer{
     width: 100%;
     bottom: 0;
     background-color: black;
     color: white;
     text-align: center;
+    padding: 30px;
+}
+footer > *{
+    padding: 10px;
+}
+footer a{
+    display: block;
+    color:white;
+    font-weight: bold;
+}
+footer a:hover{
+    color:grey;
+    transition: color 0.5s ease;
+}
+.footer-cont{
+    margin: auto;
+    color: grey;
+    font: 14px Arial, sans-serif;
+}
+footer img{
+    max-width: 30px;
+    max-height: 30px;
+    margin: 0 20px 0 20px;
 }
 
-article{
-    min-height: 520px;
+/*Content*/
+.content{
+    height: 520px;
     text-align: center;
 }
-@media screen and (max-width: 500px){
-    .nav-list-item{
-        width: 100%;
-        transition: all .5s ease-in-out;
+article{
+    padding-top: 60px; /*The height of the navbar*/
+}
+.skill-container{
+    display: grid;
+    grid-template-columns: auto;
+    padding: 10px;
+}
+.skill-item{
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    margin:10px;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.edu-bg{
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+}
+.edu-notes{
+    width: 100%;
+}
+.edu-notes > div{
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 20% 30% 30% 30%;
+    padding: 20px;
+    color: white;
+    height: 30%;
+}
+.edu-filler{
+    display: none;
+}
+.filler{
+    height: 200px;
+    width: 100%;
+}
+/*Desktop*/
+@media screen and (min-width: 660px){
+    nav .icon{
+        display: none;
     }
-    .nav-list-icon{
-        position: absolute;
-        right: 0;
+    .nav-list{
+        position: relative;
+        top:  0;
+        background-color: black;
+        max-height: inherit;
+        box-shadow: none;
     }
-    .nav-item{
+    .nav-list a{
+        display: inline-block;
+        border-bottom: none;
+        border-width: 0;
+        font-weight: 500;
+        color: white;
+    }
+    nav{
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    footer a{
         display: inline-block;
     }
-    .navbar{
-        width: 100%;
+    .footer-cont{
+        max-width: 50%;
     }
-    #nav-list{
-        display: none;
-        transition: 1s;
+
+    /*Content Desktop*/
+    .content{
+        height: 800px;
+    }
+    .skill-container{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        padding: 10px;
+    }
+    .skill-item{
+        border: 1px solid rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        font-size: 30px;
+        text-align: center;
+    }
+    .edu-bg{
+        background-size: cover;
+        background-position: auto;
+    }
+    .edu-notes{
+        width: 60%;
+    }
+
+    .edu-filler{
+        width: 40%;
+        display:inline;
     }
 }
