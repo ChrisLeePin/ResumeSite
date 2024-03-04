@@ -10,7 +10,7 @@
     <body>
         <div class="nav-wrap">
             <nav>
-                <a class="nav-logo" href="index.html"><img src="" alt="Logo"></a>
+                <a class="nav-logo" href="index.html"><img src="img/logo.png" alt="Logo"></a>
                 <div class="nav-list">  <!--The a-links below are structured like this because inline-block is a whitespace dependent method-->
                     <a class="nav-list-item" href="exp.html">
                         Experience
@@ -18,29 +18,100 @@
                         Skills
                     </a><a class="nav-list-item" href="edu.html">
                         Education
-                    </a><a class="nav-list-item" href="sampl.html">
-                        Samples
                     </a>
                 </div>
                 <div class="icon">☰</div>
             </nav>
         </div>
         <article>
-            <div class="content" style="background-color: #d2d2d2;">
+            <div class="content skMarg">
                 <div class="skill-container">
-                    <div class="skill-item">HTML</div>
-                    <div class="skill-item">1</div>
-                    <div class="skill-item">1</div>
-                    <div class="skill-item">1</div>
-                    <div class="skill-item">1</div>
-                    <div class="skill-item">1</div>
-                    <div class="skill-item">1</div>
-                    <div class="skill-item">1</div>
-                    <div class="skill-item">1</div>
+                    <div class="skill-item" onclick="showDesc(this)">HTML</div>
+                        <div id="HTML-desc" class="skillDescWrap">
+                            <div class="skillDesc">
+                                <p>
+                                    I am rather knowledgable of HTML (Hypertext Markup Language) and it's latest version HTML5
+                                </p>
+                                <ul>
+                                    <li>Main Tags</li>
+                                    <li>Semantic Elements</li>
+                                    <li>Tags and their Attributes</li>
+                                    <li>Text Formatting</li>
+                                    <li>Form Elements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    <div class="skill-item" onclick="showDesc(this)">CSS</div>
+                        <div id="CSS-desc" class="skillDescWrap">
+                            <div class="skillDesc">
+                                <p>
+                                    I am quite experienced in using CSS (Cascading Style Sheet) and all of it's function to create a design that fits a client's demands.
+                                </p>
+                                <ul>
+                                    <li>Responsive Design</li>
+                                    <li>Element Positioning</li>
+                                    <li>Display Property</li>
+                                    <li>Grid layout and Flexbox</li>
+                                </ul>
+                            </div>
+                        </div>
+                    <div class="skill-item" onclick="showDesc(this)">JS</div>
+                        <div id="JS-desc" class="skillDescWrap">
+                            <div class="skillDesc">
+                                <p>
+                                    I am capable of using Javascript to create specific web functions and to further emet the client's request.
+                                </p>
+                                <ul>
+                                    <li>Event Listeners</li>
+                                    <li>String Manipulation</li>
+                                    <li>State management</li>
+                                    <li>CRUD</li>
+                                </ul>
+                            </div>
+                        </div>
                 </div>
-            </div>
-            <div class="content" style="background-color: white;">
-                Content that changes depending on what skills are selected
+                <div class="skill-container">
+                    <div class="skill-item" onclick="showDesc(this)">Java</div>
+                        <div id="Java-desc" class="skillDescWrap">
+                            <div class="skillDesc">
+                                <p>
+                                    I have a strong foundation in Java and how it is used to integrate together with Web Development.
+                                </p>
+                                <ul>
+                                    <li>Object Oriented Programming</li>
+                                    <li>Model View Controller (MVC)</li>
+                                    <li>Java Keywords and their proper usage</li>
+                                    <li>Exception Handling</li>
+                                </ul>
+                            </div>
+                        </div>
+                    <div class="skill-item" onclick="showDesc(this)">SQL</div>
+                        <div id="SQL-desc" class="skillDescWrap">
+                            <div class="skillDesc">
+                                <p>
+                                    I am familiar with the basics of Structured Query Language (SQL)
+                                </p>
+                                <ul>
+                                    <li>CRUD</li>
+                                    <li>Using Queries to filters Data</li>
+                                    <li>Creating a Relational Database through linking Primary Keys</li>
+                                </ul>
+                            </div>
+                        </div>
+                    <div class="skill-item" onclick="showDesc(this)">SDKs</div>
+                        <div id="SDKs-desc" class="skillDescWrap">
+                            <div class="skillDesc">
+                                <p>
+                                    I have experiences in developing Web Pages with the following Software Development Kits (SDKs).
+                                </p>
+                                <ul>
+                                    <li>Visual Studio</li>
+                                    <li>Visual Code</li>
+                                    <li>Eclipse</li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
             </div>
         </article>
         <footer>
